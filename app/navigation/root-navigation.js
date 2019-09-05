@@ -1,7 +1,7 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
-
-import TodoList from '../todos/TodoList';
+import TodoDetail from '../todos/screens/TodoDetail';
+import TodoList from '../todos/screens/TodoList';
 const MainNavigator = createStackNavigator(
   {
     todoList: {
@@ -9,6 +9,9 @@ const MainNavigator = createStackNavigator(
       navigationOptions: () => ({
         title: 'Mobx React Lite',
       }),
+    },
+    todoDetail: {
+      screen: TodoDetail,
     },
   },
   {
